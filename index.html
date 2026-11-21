@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mega Hack v9.1.0-beta.8 — мод для Geometry Dash 2.2081</title>
+  <meta name="description" content="Mega Hack — мод-меню для Geometry Dash 2.2081: StartPos Switcher, хитбоксы, реплеи, спидхак и сотни настроек. Установщик ставит мод в Geode, меню открывается по Tab.">
+  <meta name="theme-color" content="#06070a">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mega Hack v9.1.0-beta.8 для Geometry Dash 2.2081">
+  <meta property="og:description" content="Мод-меню на Geode: StartPos Switcher, хитбоксы, реплеи, спидхак. Скачать установщик и поставить за пару минут.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body data-page="index">
+
+<svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12M7.5 10.5 12 15l4.5-4.5M4 20h16"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.2v13.6L19 12z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6.5 9.5 17 4 11.5"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 21s7.5-3.6 7.5-9V5.4L12 2.7 4.5 5.4V12c0 5.4 7.5 9 7.5 9z"/><path d="m8.8 11.8 2.2 2.2 4.2-4.2"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.8"/><path d="M4.6 20.4a7.4 7.4 0 0 1 14.8 0"/></symbol>
+  <symbol id="i-gauge" viewBox="0 0 24 24"><path d="M4 12h3l2.5-6.5 4 13 2.5-6.5H21"/></symbol>
+  <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2.2"/><rect x="9.6" y="9.6" width="4.8" height="4.8" rx="1"/><path d="M9 3v3M15 3v3M9 18v3M15 18v3M3 9h3M3 15h3M18 9h3M18 15h3"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3 3 7.5l9 4.5 9-4.5z"/><path d="m3 12.5 9 4.5 9-4.5M3 17l9 4.5 9-4.5"/></symbol>
+  <symbol id="i-keyboard" viewBox="0 0 24 24"><rect x="2.5" y="6" width="19" height="12" rx="2.5"/><path d="M6 10h.01M9.5 10h.01M13 10h.01M16.5 10h.01M7 14h10"/></symbol>
+  <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M6 4v5M6 15v5M12 4v9M12 19v1M18 4v1M18 11v9"/><circle cx="6" cy="12" r="2.2"/><circle cx="12" cy="16" r="2.2"/><circle cx="18" cy="8" r="2.2"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2.2"/><path d="M5.5 15H4.5A1.5 1.5 0 0 1 3 13.5v-9A1.5 1.5 0 0 1 4.5 3h9A1.5 1.5 0 0 1 15 4.5V5"/></symbol>
+  <symbol id="i-warn" viewBox="0 0 24 24"><path d="M12 3.6 21 19.4H3z"/><path d="M12 9.5v4.2M12 16.8h.01"/></symbol>
+  <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="12.5" rx="2"/><path d="M8.5 21h7M12 17v4"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 1.8"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2.5 4.5 14H11l-1 7.5L19.5 10H13z"/></symbol>
+  <symbol id="i-cube" viewBox="0 0 24 24"><path d="M12 2.5 3.5 7.3v9.4L12 21.5l8.5-4.8V7.3z"/><path d="M3.5 7.3 12 12l8.5-4.7M12 12v9.5"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3.5 13.7 9l5.5 1.7-5.5 1.7L12 18l-1.7-5.6L4.8 10.7 10.3 9z"/></symbol>
+</svg>
+
+<a class="skip" href="#main">Перейти к содержимому</a>
+
+<header class="hdr">
+  <div class="container hdr-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5 3.5 7.3v9.4L12 21.5l8.5-4.8V7.3z"/><path d="M3.5 7.3 12 12l8.5-4.7M12 12v9.5"/></svg></span>
+      <span class="brand-word">MEGA<span>HACK</span></span>
+      <span class="brand-ver">beta.8</span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Основная навигация">
+      <a class="nav-link" href="index.html" data-page="index">Главная</a>
+      <a class="nav-link" href="tutorials.html" data-page="tutorials">Туториалы</a>
+      <a class="nav-link" href="download.html" data-page="download">Скачать</a>
+      <a class="nav-link" href="faq.html" data-page="faq">FAQ</a>
+    </nav>
+    <div class="hdr-right">
+      <span class="status"><i></i>Geode<b>GD 2.2081</b></span>
+      <a class="btn btn-primary btn-sm hdr-cta" href="download.html"><svg class="ico" aria-hidden="true"><use href="#i-download"/></svg>Скачать</a>
+      <button class="burger" id="burger" type="button" aria-label="Меню" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="container hero-inner">
+
+      <div class="hero-copy">
+        <span class="eyebrow-pill"><span class="pulse"></span>Версия <b>v9.1.0-beta.8</b><span class="sep"></span>Geode</span>
+        <h1 class="hero-title">Mega Hack для <span class="hl">Geometry&nbsp;Dash</span></h1>
+        <p class="hero-lead"><strong>Mega Hack v9.1.0-beta.8</strong> для GD 2.2081: StartPos Switcher, хитбоксы, реплеи, спидхак и ещё сотни настроек. Установщик <code>.exe</code> ставит мод в Geode, меню открывается по Tab и в главном меню, и в уровне.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="download.html"><svg class="ico" aria-hidden="true"><use href="#i-download"/></svg>Скачать установщик</a>
+          <a class="btn btn-ghost btn-lg" href="tutorials.html"><svg class="ico" aria-hidden="true"><use href="#i-play"/></svg>Как установить</a>
+        </div>
+        <ul class="hero-meta">
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>GD 2.2081</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Только через Geode</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Меню по Tab</li>
+        </ul>
+      </div>
+
+      <div class="demo">
+        <span class="demo-sticker">макет меню</span>
+        <div class="ov" data-ov>
+          <div class="ov-bar">
+            <span class="ov-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="ov-title">Mega Hack <b>beta.8</b></span>
+            <span class="ov-state"><i></i>geode</span>
+          </div>
+          <div class="ov-body">
+            <div class="ov-rail" role="tablist" aria-label="Вкладки меню">
+              <button class="ov-rail-btn active" type="button" role="tab" aria-selected="true" aria-label="Level" title="Level" data-ov-tab="level"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg></button>
+              <button class="ov-rail-btn" type="button" role="tab" aria-selected="false" aria-label="Status" title="Status" data-ov-tab="status"><svg class="ico" aria-hidden="true"><use href="#i-gauge"/></svg></button>
+              <button class="ov-rail-btn" type="button" role="tab" aria-selected="false" aria-label="Cheat Safety" title="Cheat Safety" data-ov-tab="safety"><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg></button>
+              <button class="ov-rail-btn" type="button" role="tab" aria-selected="false" aria-label="Display" title="Display" data-ov-tab="display"><svg class="ico" aria-hidden="true"><use href="#i-monitor"/></svg></button>
+              <button class="ov-rail-btn" type="button" role="tab" aria-selected="false" aria-label="Speedhack" title="Speedhack" data-ov-tab="speed"><svg class="ico" aria-hidden="true"><use href="#i-bolt"/></svg></button>
+            </div>
+
+            <div class="ov-main">
+              <div class="ov-panel active" role="tabpanel" aria-label="Level" data-ov-panel="level">
+                <div class="ov-head">
+                  <div><h3>Level</h3><p>настройки уровня</p></div>
+                  <span class="ov-count">вкл. <b data-ov-count>3</b>/5</span>
+                </div>
+                <div class="ov-list">
+                  <label class="ov-opt">
+                    <span class="ov-opt-text">Hide Pause Menu<small>убрать кнопку паузы</small></span>
+                    <input class="sw" type="checkbox" checked><span class="sw-ui" aria-hidden="true"></span>
+                  </label>
+                  <label class="ov-opt">
+                    <span class="ov-opt-text">Hide Player<small>скрыть кубика</small></span>
+                    <input class="sw" type="checkbox"><span class="sw-ui" aria-hidden="true"></span>
+                  </label>
+                  <label class="ov-opt">
+                    <span class="ov-opt-text">No Camera<small>камера не двигается</small></span>
+                    <input class="sw" type="checkbox"><span class="sw-ui" aria-hidden="true"></span>
+                  </label>
+                  <label class="ov-opt">
+                    <span class="ov-opt-text">No Death Effect<small>без анимации смерти</small></span>
+                    <input class="sw" type="checkbox" checked><span class="sw-ui" aria-hidden="true"></span>
+                  </label>
+                  <label class="ov-opt">
+                    <span class="ov-opt-text">No Particles<small>без частиц</small></span>
+                    <input class="sw" type="checkbox" checked><span class="sw-ui" aria-hidden="true"></span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="ov-panel" role="tabpanel" aria-label="Status" data-ov-panel="status">
+                <div class="ov-head">
+                  <div><h3>Status</h3><p>метки поверх игры</p></div>
+                  <span class="ov-count">вкл. <b data-ov-count>3</b>/5</span>
+                </div>
+                <div class="ov-list">
+                  <label class="ov-opt">
+                    <span class="ov-opt-text">FPS Counter<small>кадры в секунду</small></span>
+                    <input class="sw" type="checkbox" checked><span class="sw-ui" aria-hidden="true"></span>
+                  </label>
+                  <label class="ov-opt">
+                    <span class="ov-opt-text">CPS Counter<small>клики в секунду</small></span>
+                    <input class="sw" type="checkbox" checked><span class="sw-ui" aria-hidden="true"></span>
+                  </label>
+                  <label class="ov-opt">
+                    <span class="ov-opt-text">Noclip Accuracy<small>точность без смертей</small></span>
+                    <input class="sw" type="checkbox"><span class="sw-ui" aria-hidden="true"></span>
+                  </label>
+                  <label class="ov-opt">
+                    <span class="ov-opt-text">Attempts<small>номер попытки</small></span>
+                    <input class="sw" type="checkbox" checked><span class="sw-ui" aria-hidden="true"></span>
+                  </label>
+                  <label class="ov-opt">
+                    <span class="ov-opt-text">Position<small>координаты и скорость</small></span>
+                    <input class="sw" type="checkbox"><span class="sw-ui" aria-hidden="true"></span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="ov-panel" role="tabpanel" aria-label="Cheat Safety" data-ov-panel="safety">
+                <div class="ov-head">
+                  <div><h3>Cheat Safety</h3><p>защита прогресса</p></div>
+                  <span class="ov-count">вкл. <b data-ov-count>2</b>/5</span>
+                </div>
+                <div class="ov-list">
+                  <label class="ov-opt">
+                    <span class="ov-opt-text">Ruleset: Mega Hack<small>показывать правила мода</small></span>
+                    <input class="sw" type="checkbox" checked><span class="sw-ui" aria-hidden="true"></span>
+                  </label>
+                  <label class="ov-opt">
+                    <span class="ov-opt-text">Disable Cheats<small>выключить всё сразу</small></span>
+                    <input class="sw" type="checkbox"><span class="sw-ui" aria-hidden="true"></span>
+                  </label>
+                  <label class="ov-opt">
+                    <span class="ov-opt-text">Auto Safe Mode<small>безопасный режим сам</small></span>
+                    <input class="sw" type="checkbox" checked><span class="sw-ui" aria-hidden="true"></span>
+                  </label>
+                  <label class="ov-opt">
+                    <span class="ov-opt-text">Safe Mode<small>не портить прогресс</small></span>
+                    <input class="sw" type="checkbox"><span class="sw-ui" aria-hidden="true"></span>
+                  </label>
+                  <label class="ov-opt">
+                    <span class="ov-opt-text">Safe Mode Popup<small>спрашивать перед уровнем</small></span>
+                    <input class="sw" type="checkbox"><span class="sw-ui" aria-hidden="true"></span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="ov-panel" role="tabpanel" aria-label="Display" data-ov-panel="display">
+                <div class="ov-head">
+                  <div><h3>Display</h3><p>кадры и физика</p></div>
+                  <span class="ov-count">вкл. <b data-ov-count>2</b>/5</span>
+                </div>
+                <div class="ov-list">
+                  <label class="ov-opt">
+                    <span class="ov-opt-text">240 FPS<small>поднять лимит кадров</small></span>
+                    <input class="sw" type="checkbox"><span class="sw-ui" aria-hidden="true"></span>
+                  </label>
+                  <label class="ov-opt">
+                    <span class="ov-opt-text">Unlock FPS<small>без ограничения</small></span>
+                    <input class="sw" type="checkbox" checked><span class="sw-ui" aria-hidden="true"></span>
+                  </label>
+                  <label class="ov-opt">
+                    <span class="ov-opt-text">Physics TPS<small>частота физики</small></span>
+                    <input class="sw" type="checkbox"><span class="sw-ui" aria-hidden="true"></span>
+                  </label>
+                  <label class="ov-opt">
+                    <span class="ov-opt-text">Frame Extrapolation<small>сгладить высокий FPS</small></span>
+                    <input class="sw" type="checkbox" checked><span class="sw-ui" aria-hidden="true"></span>
+                  </label>
+                  <label class="ov-opt">
+                    <span class="ov-opt-text">Vertical Sync<small>вертикальная синхронизация</small></span>
+                    <input class="sw" type="checkbox"><span class="sw-ui" aria-hidden="true"></span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="ov-panel" role="tabpanel" aria-label="Speedhack" data-ov-panel="speed">
+                <div class="ov-head">
+                  <div><h3>Speedhack</h3><p>скорость игры</p></div>
+                  <span class="ov-count">вкл. <b data-ov-count>2</b>/3</span>
+                </div>
+                <div class="ov-list">
+                  <label class="ov-opt">
+                    <span class="ov-opt-text">Enabled<small>включить спидхак</small></span>
+                    <input class="sw" type="checkbox" checked><span class="sw-ui" aria-hidden="true"></span>
+                  </label>
+                  <label class="ov-opt">
+                    <span class="ov-opt-text">Speedhack Audio<small>ускорять и звук</small></span>
+                    <input class="sw" type="checkbox" checked><span class="sw-ui" aria-hidden="true"></span>
+                  </label>
+                  <label class="ov-opt">
+                    <span class="ov-opt-text">Classic Mode<small>старое поведение</small></span>
+                    <input class="sw" type="checkbox"><span class="sw-ui" aria-hidden="true"></span>
+                  </label>
+                  <div class="ov-slider">
+                    <div class="ov-slider-top"><span>Speed</span><output>1.00x</output></div>
+                    <input class="rng" type="range" min="50" max="200" step="5" value="100" aria-label="Скорость игры">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ov-foot">
+            <span><kbd>Tab</kbd> открыть / закрыть</span>
+            <span>v9.1.0-beta.8</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== БЕГУЩАЯ СТРОКА ===================== -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span class="ticker-item">StartPos Switcher</span>
+      <span class="ticker-item">Hitboxes</span>
+      <span class="ticker-item">Frame Extrapolation</span>
+      <span class="ticker-item">Replay</span>
+      <span class="ticker-item">Speedhack</span>
+      <span class="ticker-item">Noclip</span>
+      <span class="ticker-item">Safe Mode</span>
+      <span class="ticker-item">FPS Counter</span>
+      <span class="ticker-item">CPS Counter</span>
+      <span class="ticker-item">No Death Effect</span>
+      <span class="ticker-item">Unlock Icons</span>
+      <span class="ticker-item">Icon Randomiser</span>
+      <span class="ticker-item">Practice Music</span>
+      <span class="ticker-item">Jump Hack</span>
+      <span class="ticker-item">Physics TPS</span>
+      <span class="ticker-item">GD 2.2081</span>
+      <span class="ticker-item">.geode</span>
+    </div>
+  </div>
+
+  <!-- ===================== ВОЗМОЖНОСТИ ===================== -->
+  <section class="section">
+    <div class="container">
+      <div class="sec-head reveal">
+        <div>
+          <p class="eyebrow">01 — функции</p>
+          <h2>Что внутри</h2>
+        </div>
+        <p class="sec-desc">Полный список вкладок — ниже. Здесь то, что включают чаще всего.</p>
+      </div>
+
+      <div class="features">
+        <article class="feature reveal">
+          <div class="feature-top">
+            <span class="feature-ico"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg></span>
+            <span class="feature-num">01</span>
+          </div>
+          <h3>StartPos Switcher</h3>
+          <p>Переключатель позиций из практики, но с сохранением StartPos, Smart StartPos и панелью прямо в уровне.</p>
+          <div class="tags"><span class="tag">Level</span><span class="tag">Practice</span></div>
+        </article>
+
+        <article class="feature reveal" style="--d:60ms">
+          <div class="feature-top">
+            <span class="feature-ico"><svg class="ico" aria-hidden="true"><use href="#i-cube"/></svg></span>
+            <span class="feature-num">02</span>
+          </div>
+          <h3>Hitboxes</h3>
+          <p>Хитбоксы игрока, шипов и блоков: цвет, толщина и показ на смерти. Всё настраивается.</p>
+          <div class="tags"><span class="tag">Show Hitboxes</span><span class="tag">on Death</span></div>
+        </article>
+
+        <article class="feature reveal" style="--d:120ms">
+          <div class="feature-top">
+            <span class="feature-ico"><svg class="ico" aria-hidden="true"><use href="#i-monitor"/></svg></span>
+            <span class="feature-num">03</span>
+          </div>
+          <h3>Frame Extrapolation</h3>
+          <p>Считает физику чаще 240 TPS, чтобы на высоком FPS игра не резала скорость и не ломала тайминг.</p>
+          <div class="tags"><span class="tag">240 FPS</span><span class="tag">TPS</span></div>
+        </article>
+
+        <article class="feature reveal">
+          <div class="feature-top">
+            <span class="feature-ico"><svg class="ico" aria-hidden="true"><use href="#i-play"/></svg></span>
+            <span class="feature-num">04</span>
+          </div>
+          <h3>Replay</h3>
+          <p>Запись кликов, сохранение в файл и воспроизведение. Экспорт в .gdr и .json.</p>
+          <div class="tags"><span class="tag">Record</span><span class="tag">Bot</span></div>
+        </article>
+
+        <article class="feature reveal" style="--d:60ms">
+          <div class="feature-top">
+            <span class="feature-ico"><svg class="ico" aria-hidden="true"><use href="#i-bolt"/></svg></span>
+            <span class="feature-num">05</span>
+          </div>
+          <h3>Speedhack</h3>
+          <p>Скорость игры от 0.5x до 2x, отдельно для звука. Classic Mode — для старых уровней.</p>
+          <div class="tags"><span class="tag">0.5–2x</span><span class="tag">Audio</span></div>
+        </article>
+
+        <article class="feature reveal" style="--d:120ms">
+          <div class="feature-top">
+            <span class="feature-ico"><svg class="ico" aria-hidden="true"><use href="#i-gauge"/></svg></span>
+            <span class="feature-num">06</span>
+          </div>
+          <h3>Status</h3>
+          <p>FPS, CPS, ноклип-точность, попытки, координаты и скорость — метки поверх игры.</p>
+          <div class="tags"><span class="tag">Labels</span><span class="tag">Noclip</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== УСТАНОВКА ===================== -->
+  <section class="section band">
+    <div class="container">
+      <div class="sec-head reveal">
+        <div>
+          <p class="eyebrow">02 — установка</p>
+          <h2>Мод через Geode</h2>
+        </div>
+        <p class="sec-desc">Распространяется установщиком .exe, файл мода — .geode. Без Geode он не заработает.</p>
+      </div>
+
+      <div class="flow">
+        <div class="flow-step reveal">
+          <span class="flow-num">01</span>
+          <div>
+            <h3>Поставь Geode</h3>
+            <p>Если его ещё нет: установщик с <a href="https://geode-sdk.org" rel="noopener">geode-sdk.org</a> ставится в папку игры.</p>
+          </div>
+        </div>
+        <div class="flow-step reveal" style="--d:80ms">
+          <span class="flow-num">02</span>
+          <div>
+            <h3>Скачай установщик</h3>
+            <p>Установщик Mega Hack (.exe) — на странице скачивания или в Telegram.</p>
+          </div>
+        </div>
+        <div class="flow-step reveal" style="--d:160ms">
+          <span class="flow-num">03</span>
+          <div>
+            <h3>Запусти и открой меню</h3>
+            <p>Установщик кладёт .geode в Geode. Меню — по Tab, в главном меню и в уровне.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-foot reveal">
+        <a class="btn btn-primary" href="download.html">Скачать установщик<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-quiet" href="tutorials.html">Инструкция по шагам</a>
+        <span class="hint">GD 2.2081 · Geode</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ВКЛАДКИ ===================== -->
+  <section class="section">
+    <div class="container">
+      <div class="sec-head reveal">
+        <div>
+          <p class="eyebrow">03 — меню</p>
+          <h2>13 вкладок</h2>
+        </div>
+        <p class="sec-desc">Слева — вкладки, внутри — настройки. Названия те же, что в игре.</p>
+      </div>
+
+      <div class="table-card reveal">
+        <div class="table-scroll">
+          <table class="matrix tabs-table">
+            <caption class="sr-only">Вкладки меню Mega Hack v9.1.0-beta.8 и настройки в них</caption>
+            <thead>
+              <tr>
+                <th scope="col">Вкладка</th>
+                <th scope="col">Что настраивается</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Bypass</th>
+                <td>Unlock Icons, Unlock Shops, Unlock Vaults, Main Levels, Slider Limit, Treasure Room</td>
+              </tr>
+              <tr>
+                <th scope="row">Creator</th>
+                <td>Accurate Save, Copy Hack, Custom Object Bypass, Default Song Bypass, Editor Extension, Free Scroll, Level Edit</td>
+              </tr>
+              <tr>
+                <th scope="row">Cosmetic</th>
+                <td>Classic Particles, Classic Pulse, Classic Wave Trail, Icon Randomiser, No Camera Zoom, No Circle Effect</td>
+              </tr>
+              <tr>
+                <th scope="row">Level</th>
+                <td>Hide Pause Menu, Hide Player, No Death Effect, No Particles, No Shake, Show Hitboxes on Death</td>
+              </tr>
+              <tr>
+                <th scope="row">Status</th>
+                <td>FPS и CPS, Noclip Accuracy, Attempts, Jumps, Percentage, Position, Velocity</td>
+              </tr>
+              <tr>
+                <th scope="row">Universal</th>
+                <td>Fast Cheats, Compact Lists, Lock Cursor, Main Menu Play, Pitch Shifter, Thread Priority</td>
+              </tr>
+              <tr>
+                <th scope="row">Cheat Safety</th>
+                <td>Ruleset: Mega Hack, Disable Cheats, Auto Safe Mode, Safe Mode Popup</td>
+              </tr>
+              <tr>
+                <th scope="row">Display</th>
+                <td>240 FPS, Unlock FPS, Physics TPS, Frame Extrapolation, Vertical Sync, Fullscreen</td>
+              </tr>
+              <tr>
+                <th scope="row">Keybinds</th>
+                <td>Горячие клавиши на любую функцию, в том числе отключение в редакторе</td>
+              </tr>
+              <tr>
+                <th scope="row">Replay</th>
+                <td>Record, сохранение и открытие записи, конвертация в .gdr и .json</td>
+              </tr>
+              <tr>
+                <th scope="row">Utility</th>
+                <td>Gameplay Options, Settings, Resources, AppData, Developer Tools</td>
+              </tr>
+              <tr>
+                <th scope="row">Interface</th>
+                <td>Hide Endscreen Cheats, Hide Menu Snow, Hide Iconic on Pause, Hide RobsVault Shortcut</td>
+              </tr>
+              <tr>
+                <th scope="row">Speedhack</th>
+                <td>Speed, Enabled, Speedhack Audio, Classic Mode</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <p class="table-note"><svg class="ico" aria-hidden="true"><use href="#i-warn"/></svg>Названия и порядок вкладок — как в меню v9.1.0-beta.8.</p>
+      <p class="table-hint">Свайп влево-вправо — вся таблица</p>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section class="section band" id="faq">
+    <div class="container">
+      <div class="sec-head reveal">
+        <div>
+          <p class="eyebrow">04 — вопросы</p>
+          <h2>Коротко</h2>
+        </div>
+        <p class="sec-desc">Ещё 6 вопросов — в <a href="faq.html">FAQ</a>: установка, меню, лидерборды.</p>
+      </div>
+
+      <div class="acc reveal">
+        <div class="acc-item">
+          <button class="acc-trigger" type="button" aria-expanded="false">
+            <span>Забанят ли аккаунт за читы?</span>
+            <span class="badge badge-acid acc-tag">Игра</span>
+            <span class="acc-icon" aria-hidden="true"><svg class="ico"><use href="#i-plus"/></svg></span>
+          </button>
+          <div class="acc-panel"><div><div class="acc-body">
+            Нет. Geometry Dash — одиночная игра, аккаунты за читы не банят. Единственное ограничение — результат может не попасть в лидерборды.
+          </div></div></div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-trigger" type="button" aria-expanded="false">
+            <span>Нужен ли Geode?</span>
+            <span class="badge acc-tag">Установка</span>
+            <span class="acc-icon" aria-hidden="true"><svg class="ico"><use href="#i-plus"/></svg></span>
+          </button>
+          <div class="acc-panel"><div><div class="acc-body">
+            Да. Установщик кладёт <code>.geode</code>-мод в Geode; без загрузчика мод не заработает.
+          </div></div></div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-trigger" type="button" aria-expanded="false">
+            <span>Меню не открывается по Tab</span>
+            <span class="badge acc-tag">Меню</span>
+            <span class="acc-icon" aria-hidden="true"><svg class="ico"><use href="#i-plus"/></svg></span>
+          </button>
+          <div class="acc-panel"><div><div class="acc-body">
+            Проверь, что мод включён в списке Geode и игра обновлена до 2.2081. Меню открывается и в главном меню, и в уровне — если не работает нигде, дело в установке, а не в уровне.
+          </div></div></div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-trigger" type="button" aria-expanded="false">
+            <span>Какая версия игры нужна?</span>
+            <span class="badge acc-tag">Установка</span>
+            <span class="acc-icon" aria-hidden="true"><svg class="ico"><use href="#i-plus"/></svg></span>
+          </button>
+          <div class="acc-panel"><div><div class="acc-body">
+            Geometry Dash <strong>2.2081</strong>. Архивных сборок нет: мод выходит только под актуальную версию игры.
+          </div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA ===================== -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-panel reveal">
+        <svg class="spikes" aria-hidden="true">
+          <defs>
+            <pattern id="spikes-pattern" width="44" height="46" patternUnits="userSpaceOnUse">
+              <path d="M0 46 22 0l22 46" fill="none" stroke="currentColor" stroke-width="1.2"/>
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#spikes-pattern)"/>
+        </svg>
+        <p class="eyebrow" style="justify-content:center">готово к установке</p>
+        <h2>Ставится за пару минут</h2>
+        <p>Нужен только Geode. Установщик ставит мод сам, меню открывается по Tab.</p>
+        <div class="cta-actions">
+          <a class="btn btn-primary btn-lg" href="download.html"><svg class="ico" aria-hidden="true"><use href="#i-download"/></svg>Скачать установщик</a>
+          <a class="btn btn-ghost btn-lg" href="tutorials.html">Инструкция</a>
+        </div>
+        <p class="cta-note">GD 2.2081 · v9.1.0-beta.8</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="index.html">
+          <span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5 3.5 7.3v9.4L12 21.5l8.5-4.8V7.3z"/><path d="M3.5 7.3 12 12l8.5-4.7M12 12v9.5"/></svg></span>
+          <span class="brand-word">MEGA<span>HACK</span></span>
+        </a>
+        <p>Фанатский сайт о Mega Hack: установка через Geode, меню и настройки. Не связан с RobTop Games и авторами мода.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Разделы</h5>
+        <a href="index.html">Главная</a>
+        <a href="tutorials.html">Туториалы</a>
+        <a href="download.html">Скачать</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <div class="foot-col">
+        <h5>Полезное</h5>
+        <a href="tutorials.html">Установка Geode</a>
+        <a href="download.html">Требования</a>
+        <a href="faq.html">Лидерборды</a>
+        <a href="faq.html">Меню по Tab</a>
+      </div>
+      <div class="foot-col">
+        <h5>Дисклеймер</h5>
+        <p class="foot-note">Geometry Dash © RobTop Games. Мод меняет клиент игры — используйте на свой риск. Результаты с читами могут не попасть в лидерборды.</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span data-year>2026</span> Mega Hack · фанатский проект</span>
+      <span class="live"><i></i>GD 2.2081 · v9.1.0-beta.8</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
